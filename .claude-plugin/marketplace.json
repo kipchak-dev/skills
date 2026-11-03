@@ -1,0 +1,12 @@
+{
+  "name": "kipchak",
+  "owner": { "name": "Mamluk", "url": "https://mamluk.net" },
+  "metadata": { "description": "Agent skills for Kipchak, the API development kit for PHP." },
+  "plugins": [
+    {
+      "name": "kipchak",
+      "source": "./",
+      "description": "Build and maintain PHP APIs with Kipchak, the API development kit on Slim 4 and FrankenPHP worker mode."
+    }
+  ]
+}
