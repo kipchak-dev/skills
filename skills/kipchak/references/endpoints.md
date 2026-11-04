@@ -41,7 +41,10 @@ final readonly class Order
 * One DTO per shape of data; nested shapes are DTOs of their own, referenced with `ref`.
 * Arrays of DTOs: annotate the property with a PHPDoc `@var list<LineItem>` for Valinor and
   `#[OA\Property(type: 'array', items: new OA\Items(ref: '#/components/schemas/LineItem'))]` for OpenAPI.
-* Dates: `DateTimeImmutable` properties with `format: 'date-time'` and an ISO 8601 example.
+* Dates: `string` properties holding ISO 8601, with `format: 'date-time'` and an example such as
+  `'2026-01-31T09:00:00+00:00'`. `Http\Response::json()` encodes a `DateTimeImmutable` in PHP's own object form
+  (`{"date": ..., "timezone_type": ..., "timezone": ...}`), not as the string the schema describes; convert dates
+  with `->format(DATE_ATOM)` when filling the DTO.
 * Closed sets of values: a backed `enum`, which OpenAPI renders as an enum.
 
 ## 2. Model: `api/Models/Orders.php`

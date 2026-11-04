@@ -1,6 +1,6 @@
 {
   "name": "kipchak",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Build and maintain PHP APIs with Kipchak, the API development kit on Slim 4 and FrankenPHP worker mode.",
   "author": { "name": "Mamluk", "url": "https://mamluk.net" },
   "homepage": "https://kipchak.dev",
