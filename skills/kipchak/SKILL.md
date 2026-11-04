@@ -46,6 +46,9 @@ Commands in a project created from the starter (`composer create-project kipchak
 * `composer test`: run the tests. Run them after every change.
 * `composer openapi`: write the OpenAPI document to `openapi.yaml`; fails if the document has a problem.
 * `docker compose up --watch`: run the API on <http://localhost:8080>, restarting the worker when a file changes.
+* `vendor/bin/kipchak add <name>`: add a Kipchak driver or middleware with its configuration and the drivers it needs
+  (starter 4.2 and later; `composer require --dev kipchak/cli` in older projects). Prefer it to editing
+  `drivers/drivers.php` or `middlewares/middlewares.php` by hand.
 
 ## Rules
 

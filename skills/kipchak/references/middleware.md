@@ -38,6 +38,10 @@ In the example above a request passes through the outer Error, then Subashi, the
 the route. Projects created from the starter have a test, `tests/MiddlewareOrderTest.php`, that fails if Error is
 not the outermost.
 
+To add a Kipchak middleware package, prefer `vendor/bin/kipchak add <name>` (for example `auth-key`) when the project
+has the Kipchak CLI: it installs the package, copies its configuration and places its line between the two Error
+lines in the order the package documents.
+
 ## Group and route middleware
 
 Attach middleware to a route group, or to a single route, with `add()`. Group and route middleware run after the

@@ -6,6 +6,16 @@ drivers is in `packages.md`; each has a documentation page at `https://kipchak.d
 
 ## Using a driver
 
+If the project has the Kipchak CLI (`vendor/bin/kipchak`, included from starter 4.2), use it: it does steps 1 to 3
+below, adds any Kipchak drivers the package needs, and lists the settings to supply. Check the change first with
+`--dry-run` when the package is already installed.
+
+```bash
+vendor/bin/kipchak add doctrine
+```
+
+Otherwise:
+
 1. Install it: `composer require kipchak/driver-doctrine`.
 2. Add its configuration file to `config/`, named as its documentation page says (`kipchak.doctrine.php`). Read
    secrets and hosts from the environment with `env()`:
